@@ -1,4 +1,15 @@
-
+import neckStretch from "../assets/exercises/01-neck-stretch.png";
+import chinTuck from "../assets/exercises/02-chin-tuck.png";
+import shoulderRolls from "../assets/exercises/03-shoulder-rolls.png";
+import pendulumExercise from "../assets/exercises/04-pendulum-exercise.png";
+import upperBackStretch from "../assets/exercises/05-upper-back-stretch.png";
+import shoulderBladeSqueeze from "../assets/exercises/06-shoulder-blade-squeeze.png";
+import pelvicTilt from "../assets/exercises/07-pelvic-tilt.png";
+import kneeToChest from "../assets/exercises/08-knee-to-chest.png";
+import heelSlides from "../assets/exercises/09-heel-slides.png";
+import straightLegRaise from "../assets/exercises/10-straight-leg-raise.png";
+import ankleCircles from "../assets/exercises/11-ankle-circles.png";
+import calfStretch from "../assets/exercises/12-calf-stretch.png";
 const exercises = {
   Neck: [
     {
@@ -8,6 +19,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: neckStretch,
       instructions: [
         "Sit or stand comfortably with your shoulders relaxed.",
         "Slowly tilt your head toward one shoulder.",
@@ -22,6 +34,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: chinTuck,
       instructions: [
         "Sit or stand upright with your shoulders relaxed.",
         "Look straight ahead and gently draw your chin backward.",
@@ -39,6 +52,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: shoulderRolls,
       instructions: [
         "Sit or stand comfortably with your arms relaxed.",
         "Slowly lift your shoulders toward your ears.",
@@ -53,6 +67,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: pendulumExercise,
       instructions: [
         "Support yourself with one hand on a stable surface.",
         "Let the affected arm hang relaxed toward the floor.",
@@ -70,6 +85,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: upperBackStretch,
       instructions: [
         "Sit comfortably with your feet supported.",
         "Bring your arms forward and gently reach outward.",
@@ -84,6 +100,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: shoulderBladeSqueeze,
       instructions: [
         "Sit or stand upright with your shoulders relaxed.",
         "Gently draw your shoulder blades backward.",
@@ -101,6 +118,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: pelvicTilt,
       instructions: [
         "Lie comfortably on your back with your knees bent.",
         "Keep your feet supported on the floor.",
@@ -115,6 +133,7 @@ const exercises = {
       reps: "8",
       sets: "2",
       rest: "30 sec",
+      image: kneeToChest,
       instructions: [
         "Lie comfortably on your back with both knees bent.",
         "Slowly bring one knee toward your chest.",
@@ -132,6 +151,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: heelSlides,
       instructions: [
         "Lie comfortably on your back with your legs relaxed.",
         "Slowly slide one heel toward your body.",
@@ -146,6 +166,7 @@ const exercises = {
       reps: "8",
       sets: "2",
       rest: "30 sec",
+      image: straightLegRaise,
       instructions: [
         "Lie comfortably on your back with one knee bent.",
         "Keep the other leg straight and relaxed.",
@@ -163,6 +184,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: ankleCircles,
       instructions: [
         "Sit comfortably with your foot slightly lifted.",
         "Slowly move your ankle in a circular direction.",
@@ -177,6 +199,7 @@ const exercises = {
       reps: "10",
       sets: "2",
       rest: "30 sec",
+      image: calfStretch,
       instructions: [
         "Stand facing a stable surface for support.",
         "Place the affected leg slightly behind you.",

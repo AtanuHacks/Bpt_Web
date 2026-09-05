@@ -10,9 +10,11 @@ function ExerciseDetail({ exercise, index, total, onBack, onNext, onPrevious }) 
 
       <section className="exercise-detail-card">
         <div className="exercise-detail-image">
-          <div className="exercise-image-text">
-            Exercise Image
-          </div>
+          <img
+            src={exercise.image}
+            alt={exercise.name}
+            className="exercise-detail-img"
+          />
         </div>
 
         <div className="exercise-detail-content">

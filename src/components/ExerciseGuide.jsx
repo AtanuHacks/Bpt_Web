@@ -78,8 +78,12 @@ function ExerciseGuide({ user, onBack }) {
           <div className="exercise-list">
             {recommendedExercises.map((exercise, index) => (
               <article className="exercise-item" key={exercise.name}>
-                <div className="exercise-image">
-                  Exercise Image
+                <div className="exercise-card-image">
+                  <img
+                    src={exercise.image}
+                    alt={exercise.name}
+                    className="exercise-card-img"
+                  />
                 </div>
 
                 <div className="exercise-info">

@@ -1,10 +1,32 @@
-
 .exercise-page {
   min-height: 100vh;
   padding: 40px 20px 0;
   background: #f8faf9;
   box-sizing: border-box;
 }
+
+/* Back Button */
+
+.exercise-back-button {
+  display: block;
+  width: min(850px, 100%);
+  margin: 0 auto 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #66756f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.exercise-back-button:hover {
+  color: #719d8c;
+}
+
+/* Main Card */
 
 .exercise-card {
   width: min(850px, 100%);
@@ -67,31 +89,52 @@
   line-height: 1.7;
 }
 
-/* Exercise */
+/* Exercise Item */
 
 .exercise-item {
   display: flex;
+  width: 100%;
   overflow: hidden;
   border: 1px solid #e4ebe7;
   border-radius: 20px;
   background: #fbfcfb;
+  box-sizing: border-box;
 }
 
-.exercise-image {
+/* Exercise Image */
+
+.exercise-image,
+.exercise-card-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 38%;
   width: 38%;
+  min-width: 0;
   min-height: 320px;
+  padding: 15px;
+  box-sizing: border-box;
   background: #e9f0ed;
-  color: #719d8c;
-  font-size: 13px;
-  font-weight: 700;
+  overflow: hidden;
 }
+
+.exercise-card-img,
+.exercise-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Exercise Info */
 
 .exercise-info {
   flex: 1;
+  min-width: 0;
   padding: 32px;
+  box-sizing: border-box;
 }
 
 .exercise-number {
@@ -105,6 +148,7 @@
   margin: 10px 0 8px;
   font-family: "Manrope", sans-serif;
   font-size: 27px;
+  line-height: 1.2;
 }
 
 .exercise-info p {
@@ -114,8 +158,11 @@
   line-height: 1.6;
 }
 
+/* Exercise Details */
+
 .exercise-details {
   display: flex;
+  flex-wrap: wrap;
   gap: 35px;
   margin: 25px 0;
 }
@@ -133,15 +180,17 @@
 }
 
 .exercise-details span {
+  color: #26332f;
   font-size: 17px;
   font-weight: 700;
-  color: #26332f;
 }
 
 /* Button */
 
 .exercise-info .full-button {
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 /* Note */
@@ -154,6 +203,7 @@
   padding: 18px;
   border-radius: 15px;
   background: #f2f6f4;
+  box-sizing: border-box;
 }
 
 .exercise-note-icon {
@@ -205,10 +255,12 @@
   display: flex;
   justify-content: center;
   gap: 8px;
+  width: 100%;
   padding: 25px 20px;
   border-top: 1px solid #e5ebe8;
   color: #89948f;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
 .exercise-page .app-footer p {
@@ -220,6 +272,24 @@
   text-decoration: none;
 }
 
+/* Tablet */
+
+@media (max-width: 850px) {
+  .exercise-card {
+    padding: 35px;
+  }
+
+  .exercise-info {
+    padding: 28px;
+  }
+
+  .exercise-image,
+  .exercise-card-image {
+    flex-basis: 40%;
+    width: 40%;
+  }
+}
+
 /* Mobile */
 
 @media (max-width: 700px) {
@@ -228,52 +298,125 @@
   }
 
   .exercise-card {
+    width: 100%;
     padding: 25px 20px;
     border-radius: 22px;
   }
 
+  .exercise-header {
+    margin-bottom: 25px;
+  }
+
   .exercise-header h1 {
     font-size: 34px;
+    letter-spacing: -0.7px;
+  }
+
+  .exercise-header p {
+    font-size: 14px;
   }
 
   .exercise-item {
     flex-direction: column;
+    width: 100%;
   }
 
-  .exercise-image {
+  .exercise-image,
+  .exercise-card-image {
+    flex: none;
     width: 100%;
-    min-height: 220px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.45 / 1;
+    padding: 10px;
+  }
+
+  .exercise-card-img,
+  .exercise-image img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 
   .exercise-info {
+    width: 100%;
     padding: 25px;
+  }
+
+  .exercise-info h2 {
+    font-size: 25px;
+  }
+
+  .exercise-info p {
+    font-size: 14px;
   }
 
   .exercise-details {
     gap: 25px;
+    margin: 22px 0;
+  }
+
+  .exercise-info .full-button {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+  }
+
+  .exercise-note {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .exercise-page .assessment-dots {
+    margin: 22px 0;
   }
 
   .exercise-page .app-footer {
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+    padding: 20px 15px;
     text-align: center;
   }
 }
-.exercise-back-button {
-  display: block;
-  width: min(850px, 100%);
-  margin: 0 auto 18px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: #66756f;
-  font-family: "DM Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-}
 
-.exercise-back-button:hover {
-  color: #719d8c;
+/* Small Mobile */
+
+@media (max-width: 420px) {
+  .exercise-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .exercise-card {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+
+  .exercise-header h1 {
+    font-size: 30px;
+  }
+
+  .exercise-info {
+    padding: 22px 18px;
+  }
+
+  .exercise-info h2 {
+    font-size: 23px;
+  }
+
+  .exercise-details {
+    gap: 18px;
+  }
+
+  .exercise-details span {
+    font-size: 16px;
+  }
+
+  .exercise-info .full-button {
+    font-size: 13px;
+  }
 }

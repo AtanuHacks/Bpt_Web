@@ -1,13 +1,15 @@
 .exercise-detail-page {
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 40px 20px 0;
   box-sizing: border-box;
   background: #f8faf9;
 }
 
+/* Back Button */
+
 .exercise-back-button {
   display: block;
-  width: min(850px, 100%);
+  width: min(1000px, 100%);
   margin: 0 auto 18px;
   padding: 0;
   border: none;
@@ -24,6 +26,8 @@
   color: #719d8c;
 }
 
+/* Main Detail Card */
+
 .exercise-detail-card {
   display: flex;
   width: min(1000px, 100%);
@@ -34,13 +38,29 @@
   box-shadow: 0 15px 45px rgba(38, 51, 47, 0.07);
 }
 
+/* Exercise Image */
+
 .exercise-detail-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 42%;
   width: 42%;
+  min-width: 0;
   min-height: 620px;
+  padding: 20px;
+  box-sizing: border-box;
   background: #e9f0ed;
+  overflow: hidden;
+}
+
+.exercise-detail-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 580px;
+  object-fit: contain;
 }
 
 .exercise-image-text {
@@ -49,10 +69,13 @@
   font-weight: 700;
 }
 
+/* Content */
+
 .exercise-detail-content {
-  flex: 1;
+  flex: 1 1 58%;
   min-width: 0;
   padding: 50px;
+  box-sizing: border-box;
 }
 
 .exercise-detail-number {
@@ -77,8 +100,11 @@
   font-size: 15px;
 }
 
+/* Stats */
+
 .exercise-detail-stats {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   margin: 30px 0;
   padding: 20px 0;
@@ -104,10 +130,13 @@
   font-weight: 700;
 }
 
+/* Instructions */
+
 .instructions h2 {
   margin: 0 0 15px;
   font-family: "Manrope", sans-serif;
   font-size: 20px;
+  color: #26332f;
 }
 
 .instructions ol {
@@ -121,6 +150,8 @@
   font-size: 14px;
   line-height: 1.6;
 }
+
+/* Action Buttons */
 
 .exercise-detail-actions {
   display: flex;
@@ -163,6 +194,8 @@
   cursor: not-allowed;
 }
 
+/* Safety Note */
+
 .exercise-safety {
   width: min(1000px, 100%);
   margin: 20px auto 0;
@@ -184,7 +217,7 @@
   line-height: 1.6;
 }
 
-/* Footer */
+/* Progress Dots */
 
 .exercise-detail-page .assessment-dots {
   display: flex;
@@ -206,14 +239,20 @@
   background: #719d8c;
 }
 
+/* Footer */
+
 .exercise-detail-page .app-footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 8px;
+  width: 100%;
+  margin-top: 20px;
   padding: 25px 20px;
   border-top: 1px solid #e5ebe8;
   color: #89948f;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
 .exercise-detail-page .app-footer p {
@@ -225,22 +264,68 @@
   text-decoration: none;
 }
 
+/* Tablet */
+
+@media (max-width: 850px) {
+  .exercise-detail-content {
+    padding: 35px;
+  }
+
+  .exercise-detail-image {
+    flex-basis: 40%;
+    width: 40%;
+    min-height: 560px;
+  }
+
+  .exercise-detail-content h1 {
+    font-size: 36px;
+  }
+
+  .exercise-detail-stats {
+    gap: 25px;
+  }
+}
+
 /* Mobile */
 
 @media (max-width: 750px) {
   .exercise-detail-page {
-    padding: 25px 15px;
+    padding: 25px 15px 0;
+  }
+
+  .exercise-back-button {
+    width: 100%;
+    margin-bottom: 15px;
   }
 
   .exercise-detail-card {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 22px;
   }
 
+  /* Full-width image on mobile */
+
   .exercise-detail-image {
+    display: flex;
+    flex: none;
     width: 100%;
-    min-height: 250px;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 1.35 / 1;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .exercise-detail-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 
   .exercise-detail-content {
@@ -252,11 +337,19 @@
 
   .exercise-detail-content h1 {
     font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .exercise-detail-description {
+    font-size: 14px;
   }
 
   .exercise-detail-stats {
     gap: 25px;
+    margin: 25px 0;
   }
+
+  /* Mobile buttons */
 
   .exercise-detail-actions {
     display: flex;
@@ -271,24 +364,56 @@
   .exercise-detail-actions .start-button,
   .exercise-detail-actions .secondary-exercise-button {
     display: block;
+    flex: none;
     width: 100% !important;
     min-width: 0 !important;
     max-width: 100% !important;
-    flex: none !important;
-    box-sizing: border-box;
     margin: 0;
-  }
-
-  .exercise-detail-actions .start-button {
     padding-left: 15px;
     padding-right: 15px;
-    white-space: nowrap;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  .exercise-safety {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px 18px;
+  }
+
+  .exercise-detail-page .assessment-dots {
+    margin: 22px 0;
+  }
+
+  /* Footer */
+
+  .exercise-detail-page .app-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+    padding: 20px 15px;
+    text-align: center;
   }
 }
 
-/* Small mobile */
+/* Small Mobile */
 
 @media (max-width: 400px) {
+  .exercise-detail-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .exercise-detail-card {
+    border-radius: 20px;
+  }
+
+  .exercise-detail-image {
+    aspect-ratio: 1.25 / 1;
+    padding: 10px;
+  }
+
   .exercise-detail-content {
     padding: 25px 20px;
   }
@@ -302,6 +427,10 @@
     gap: 10px;
   }
 
+  .exercise-detail-stats span {
+    font-size: 16px;
+  }
+
   .exercise-detail-actions {
     width: 100%;
   }
@@ -309,15 +438,5 @@
   .exercise-detail-actions .start-button,
   .exercise-detail-actions .secondary-exercise-button {
     width: 100% !important;
-  }
-}
-
-/* Footer mobile */
-
-@media (max-width: 700px) {
-  .exercise-detail-page .app-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 }
