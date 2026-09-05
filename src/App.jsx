@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./App.css";
+import physioWoman from "./assets/physio-woman2.png";
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -177,6 +179,7 @@ function App() {
           <span className={step >= 2 ? "active" : ""} />
           <span className={step >= 3 ? "active" : ""} />
         </div>
+        <Footer />
       </main>
     );
   }
@@ -251,15 +254,11 @@ function App() {
         <div className="hero-art">
           <div className="art-bg"></div>
 
-          <div className="person">
-            <div className="head">🙂</div>
-            <div className="neck"></div>
-            <div className="body"></div>
-            <div className="arm left"></div>
-            <div className="arm right"></div>
-            <div className="leg left-leg"></div>
-            <div className="leg right-leg"></div>
-          </div>
+          <img
+            src={physioWoman}
+            alt="Woman demonstrating physiotherapy movement"
+            className="hero-person-image"
+          />
 
           <div className="pain neck-pain">
             <b></b>
@@ -330,7 +329,7 @@ function App() {
         <span></span>
         <span></span>
       </div>
-
+      <Footer />
     </main>
   );
 }
@@ -348,5 +347,20 @@ function Feature({ icon, title, text }) {
     </article>
   );
 }
+
+function Footer() {
+  return (
+    <footer className="app-footer">
+      <p>© 2026 Atanu Bose . All rights reserved .</p>
+      <p>
+        &nbsp; Contact:{" "}
+        <a href="mailto:atanu6939@gmail.com">
+          atanu6939@gmail.com
+        </a>
+      </p>
+    </footer>
+  );
+}
+
 
 export default App;
