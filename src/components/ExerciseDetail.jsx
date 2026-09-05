@@ -48,17 +48,9 @@ function ExerciseDetail({ exercise, index, total, onBack, onNext, onPrevious }) 
             <h2>How to perform</h2>
 
             <ol>
-              <li>Get into a comfortable starting position.</li>
-              <li>
-                Perform the movement slowly and without forcing the
-                range of motion.
-              </li>
-              <li>
-                Breathe normally throughout the exercise.
-              </li>
-              <li>
-                Return to the starting position and repeat.
-              </li>
+              {exercise.instructions.map((instruction, index) => (
+                <li key={index}>{instruction}</li>
+              ))}
             </ol>
           </div>
 

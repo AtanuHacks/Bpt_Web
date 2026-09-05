@@ -2,10 +2,28 @@ import ExerciseDetail from "./ExerciseDetail";
 import "./ExerciseGuide.css";
 import exercises from "../data/exercises";
 import { useState } from "react";
+import CompletionScreen from "./CompletionScreen";
 
 function ExerciseGuide({ user, onBack }) {
   const recommendedExercises = exercises[user.pain] || [];
   const [selectedExercise, setSelectedExercise] = useState(null);
+  const [completed, setCompleted] = useState(false);
+  if (completed) {
+    return (
+      <CompletionScreen
+        user={user}
+        onRestart={() => {
+          setCompleted(false);
+          setSelectedExercise(null);
+        }}
+        onBack={() => {
+          setCompleted(false);
+          setSelectedExercise(null);
+        }}
+      />
+    );
+  }
+
   if (selectedExercise !== null) {
     return (
       <ExerciseDetail
@@ -20,7 +38,7 @@ function ExerciseGuide({ user, onBack }) {
           if (selectedExercise < recommendedExercises.length - 1) {
             setSelectedExercise((current) => current + 1);
           } else {
-            setSelectedExercise(null);
+            setCompleted(true);
           }
         }}
       />
