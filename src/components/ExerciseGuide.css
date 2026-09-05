@@ -1,0 +1,279 @@
+
+.exercise-page {
+  min-height: 100vh;
+  padding: 40px 20px 0;
+  background: #f8faf9;
+  box-sizing: border-box;
+}
+
+.exercise-card {
+  width: min(850px, 100%);
+  margin: 0 auto;
+  padding: 45px;
+  box-sizing: border-box;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(38, 51, 47, 0.07);
+}
+
+/* Progress */
+
+.exercise-card .progress {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8eeeb;
+}
+
+.exercise-card .progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: #719d8c;
+}
+
+.exercise-card .step {
+  margin-bottom: 25px;
+  color: #719d8c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+/* Header */
+
+.exercise-header {
+  margin-bottom: 35px;
+}
+
+.exercise-header h1 {
+  margin: 0 0 14px;
+  font-family: "Manrope", sans-serif;
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.exercise-header h1 span {
+  color: #719d8c;
+}
+
+.exercise-header p {
+  max-width: 600px;
+  margin: 0;
+  color: #6d7974;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Exercise */
+
+.exercise-item {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #e4ebe7;
+  border-radius: 20px;
+  background: #fbfcfb;
+}
+
+.exercise-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38%;
+  min-height: 320px;
+  background: #e9f0ed;
+  color: #719d8c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.exercise-info {
+  flex: 1;
+  padding: 32px;
+}
+
+.exercise-number {
+  color: #719d8c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.exercise-info h2 {
+  margin: 10px 0 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 27px;
+}
+
+.exercise-info p {
+  margin: 0;
+  color: #6d7974;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.exercise-details {
+  display: flex;
+  gap: 35px;
+  margin: 25px 0;
+}
+
+.exercise-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exercise-details strong {
+  color: #89948f;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.exercise-details span {
+  font-size: 17px;
+  font-weight: 700;
+  color: #26332f;
+}
+
+/* Button */
+
+.exercise-info .full-button {
+  width: 100%;
+}
+
+/* Note */
+
+.exercise-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 15px;
+  background: #f2f6f4;
+}
+
+.exercise-note-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #dce9e3;
+  color: #557b6c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.exercise-note p {
+  margin: 2px 0 0;
+  color: #6d7974;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Dots */
+
+.exercise-page .assessment-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 25px 0;
+}
+
+.exercise-page .assessment-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccd5d1;
+}
+
+.exercise-page .assessment-dots span.active {
+  width: 22px;
+  border-radius: 10px;
+  background: #719d8c;
+}
+
+/* Footer */
+
+.exercise-page .app-footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 25px 20px;
+  border-top: 1px solid #e5ebe8;
+  color: #89948f;
+  font-size: 12px;
+}
+
+.exercise-page .app-footer p {
+  margin: 0;
+}
+
+.exercise-page .app-footer a {
+  color: #719d8c;
+  text-decoration: none;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .exercise-page {
+    padding: 20px 15px 0;
+  }
+
+  .exercise-card {
+    padding: 25px 20px;
+    border-radius: 22px;
+  }
+
+  .exercise-header h1 {
+    font-size: 34px;
+  }
+
+  .exercise-item {
+    flex-direction: column;
+  }
+
+  .exercise-image {
+    width: 100%;
+    min-height: 220px;
+  }
+
+  .exercise-info {
+    padding: 25px;
+  }
+
+  .exercise-details {
+    gap: 25px;
+  }
+
+  .exercise-page .app-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.exercise-back-button {
+  display: block;
+  width: min(850px, 100%);
+  margin: 0 auto 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #66756f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.exercise-back-button:hover {
+  color: #719d8c;
+}

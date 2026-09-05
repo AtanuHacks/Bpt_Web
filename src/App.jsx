@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import physioWoman from "./assets/physio-woman2.png";
+import ExerciseGuide from "./components/ExerciseGuide";
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -27,6 +28,9 @@ function App() {
   };
 
   if (started) {
+    if (step === 4) {
+      return <ExerciseGuide user={user} onBack={() => setStep(3)} />;
+    }
     return (
       <main className="assessment-page">
         <button className="back-button" onClick={previousStep}>
@@ -162,9 +166,7 @@ function App() {
                 className="start-button full-button"
                 disabled={!user.pain}
                 onClick={() => {
-                  alert(
-                    `Thanks ${user.name}! We will show guidance for ${user.pain} pain.`
-                  );
+                  setStep(4);
                 }}
               >
                 SHOW MY EXERCISES →
@@ -190,7 +192,6 @@ function App() {
       <nav className="navbar">
         <div className="brand">
           <div className="brand-icon">✚</div>
-
           <div>
             <div className="brand-name">
               Physio<span>Guide</span>
@@ -201,8 +202,6 @@ function App() {
             </div>
           </div>
         </div>
-
-        <button className="menu">☰</button>
       </nav>
 
       <section className="hero">

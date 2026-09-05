@@ -1,0 +1,323 @@
+.exercise-detail-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background: #f8faf9;
+}
+
+.exercise-back-button {
+  display: block;
+  width: min(850px, 100%);
+  margin: 0 auto 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #66756f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.exercise-back-button:hover {
+  color: #719d8c;
+}
+
+.exercise-detail-card {
+  display: flex;
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(38, 51, 47, 0.07);
+}
+
+.exercise-detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42%;
+  min-height: 620px;
+  background: #e9f0ed;
+}
+
+.exercise-image-text {
+  color: #719d8c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.exercise-detail-content {
+  flex: 1;
+  min-width: 0;
+  padding: 50px;
+}
+
+.exercise-detail-number {
+  color: #719d8c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.exercise-detail-content h1 {
+  margin: 12px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  line-height: 1.15;
+  color: #26332f;
+}
+
+.exercise-detail-description {
+  margin: 0;
+  color: #6d7974;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.exercise-detail-stats {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e7ece9;
+  border-bottom: 1px solid #e7ece9;
+}
+
+.exercise-detail-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.exercise-detail-stats strong {
+  color: #89948f;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.exercise-detail-stats span {
+  color: #26332f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.instructions h2 {
+  margin: 0 0 15px;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+}
+
+.instructions ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  color: #6d7974;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.exercise-detail-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+.exercise-detail-actions .start-button {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.secondary-exercise-button {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #dce5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #66756f;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.secondary-exercise-button:hover {
+  border-color: #719d8c;
+  color: #719d8c;
+}
+
+.secondary-exercise-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.exercise-safety {
+  width: min(1000px, 100%);
+  margin: 20px auto 0;
+  padding: 18px 22px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: #f2f6f4;
+}
+
+.exercise-safety strong {
+  color: #557b6c;
+  font-size: 13px;
+}
+
+.exercise-safety p {
+  margin: 5px 0 0;
+  color: #6d7974;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Footer */
+
+.exercise-detail-page .assessment-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 25px 0;
+}
+
+.exercise-detail-page .assessment-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccd5d1;
+}
+
+.exercise-detail-page .assessment-dots span.active {
+  width: 22px;
+  border-radius: 10px;
+  background: #719d8c;
+}
+
+.exercise-detail-page .app-footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 25px 20px;
+  border-top: 1px solid #e5ebe8;
+  color: #89948f;
+  font-size: 12px;
+}
+
+.exercise-detail-page .app-footer p {
+  margin: 0;
+}
+
+.exercise-detail-page .app-footer a {
+  color: #719d8c;
+  text-decoration: none;
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+  .exercise-detail-page {
+    padding: 25px 15px;
+  }
+
+  .exercise-detail-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .exercise-detail-image {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .exercise-detail-content {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 25px;
+    box-sizing: border-box;
+  }
+
+  .exercise-detail-content h1 {
+    font-size: 32px;
+  }
+
+  .exercise-detail-stats {
+    gap: 25px;
+  }
+
+  .exercise-detail-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    margin-top: 25px;
+    box-sizing: border-box;
+  }
+
+  .exercise-detail-actions .start-button,
+  .exercise-detail-actions .secondary-exercise-button {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: none !important;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .exercise-detail-actions .start-button {
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 400px) {
+  .exercise-detail-content {
+    padding: 25px 20px;
+  }
+
+  .exercise-detail-content h1 {
+    font-size: 29px;
+  }
+
+  .exercise-detail-stats {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .exercise-detail-actions {
+    width: 100%;
+  }
+
+  .exercise-detail-actions .start-button,
+  .exercise-detail-actions .secondary-exercise-button {
+    width: 100% !important;
+  }
+}
+
+/* Footer mobile */
+
+@media (max-width: 700px) {
+  .exercise-detail-page .app-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
